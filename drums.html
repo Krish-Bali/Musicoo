@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRUMKITS</title>
+    <script src="app.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px ;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        h1{
+    font-family: "Audiowide", sans-serif;
+}
+       
+    
+        header .icon-cart span{
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            background-color: red;
+            color: #fff;
+            border-radius: 50%;
+            position: relative;
+            right: -20px;
+            
+            
+
+        }
+
+        .container {
+            width: 900px;
+            max-width: 90vw;
+            margin: auto;
+            text-align: center;
+            padding-top: 10px;
+
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            filter: drop-shadow(0 50px 20px #0009);
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 20px;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .svg{
+            width: 30px;
+        }
+        .cartTab{
+    width: 400px;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    inset: 0 -400 0 auto;
+    grid-template-rows: 70px 1fr 70px;
+        }
+
+
+
+.product p {
+            color: #888;
+        }
+        .cartTab .listCart .item img{
+width: 100%;
+}
+.cartTab .listCart .item {
+display: grid;
+grid-template-columns: 70px 150px 50px 1fr;
+gap: 10px;
+text-align: center;
+align-items: center;
+}
+.listCart .quantity span{
+display: inline-block;
+width: 25px;
+height: 25px;
+background-color: #eee;
+color: #555;
+border-radius: 50%;
+cursor: pointer;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+.listCart .quantity span:nth-child(2){
+
+background-color: transparent;
+color: #eee;
+}
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DRUMKITS</h1>
+        
+              
+    </header>
+
+    
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/TORNADO.jpg" alt="Product 1">
+                <h3>MAPEX TORNADO</h3>
+                <p>Perfect for beginners</p>
+                <p>INR 40,000/-</p>
+                <div class="audio-container">
+                    <audio controls style="width: 200px;">
+                      <source src="drumsaudio-[AudioTrimmer.com].mp3" type="audio/mp3">
+                      Your browser does not support the audio element.
+                    </audio>
+                    <style>
+                    
+            
+                        button {
+                            background-color: #4CAF50;
+                            color: #fff;
+                            border: none;
+                            padding: 10px 20px;
+                            font-size: 1em;
+                            cursor: pointer;
+                            border-radius: 10px;
+                            transition: background-color 0.3s ease-in-out;
+                        }
+                
+                        button:hover {
+                            background-color: #45a049;
+                        }
+                    </style>
+                      <button type="button">Add to cart</button>
+                
+                  </div>
+                
+            </div>
+
+            <div class="product">
+                <img src="images/venus.webp" alt="Product 2">
+                <h3>MAPEX VENUS</h3>
+                <p>Great for intermediates to professionals.</p>
+                <p>INR 52000/-</p>
+                <div class="audio-container">
+                    <audio controls style="width: 200px;">
+                      <source src="drumsaudio-[AudioTrimmer.com].mp3" type="audio/mp3">
+                      Your browser does not support the audio element.
+                    </audio>
+                    <style>
+                    
+            
+                        button {
+                            background-color: #4CAF50;
+                            color: #fff;
+                            border: none;
+                            padding: 10px 20px;
+                            font-size: 1em;
+                            cursor: pointer;
+                            border-radius: 5px;
+                            transition: background-color 0.3s ease-in-out;
+                        }
+                
+                        button:hover {
+                            background-color: #45a049;
+                        }
+                    </style>
+                      <button type="button">Add to cart</button>
+                
+                  </div>
+            </div>
+            <div class="product">
+                <img src="images/masters.jpg" alt="Product 2">
+                <h3>MAPEX MASTERS</h3>
+                <p>Go to for professional drummers.</p>
+                <p>INR 1,20,000/-</p>
+                <div class="audio-container">
+                    <audio controls style="width: 200px;">
+                      <source src="drumsaudio-[AudioTrimmer.com].mp3" type="audio/mp3">
+                      Your browser does not support the audio element.
+                    </audio>
+                
+                  </div>
+                  <style>
+                    
+            
+                    button {
+                        background-color: #4CAF50;
+                        color: #fff;
+                        border: none;
+                        padding: 10px 20px;
+                        font-size: 1em;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        transition: background-color 0.3s ease-in-out;
+                    }
+            
+                    button:hover {
+                        background-color: #45a049;
+                    }
+                </style>
+                  <button type="button">Add to cart</button>
+
+            </div>
+            <div class="product">
+                <img src="images/tamaa.png" alt="Product 2">
+                <h3>TAMA Starclassic</h3>
+                <p>Exactly what you need for a perfect recoring session.</p>
+                <p>INR 1,35,000/-</p>
+                <div class="audio-container">
+                    <audio controls style="width: 200px;">
+                      <source src="drumsaudio-[AudioTrimmer.com].mp3" type="audio/mp3">
+                      Your browser does not support the audio element.
+                    </audio>
+                
+                  </div>
+                  <style>
+                    
+            
+                    button {
+                        background-color: #4CAF50;
+                        color: #fff;
+                        border: none;
+                        padding: 10px 20px;
+                        font-size: 1em;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        transition: background-color 0.3s ease-in-out;
+                        align-items:baseline;
+                    }
+            
+                    button:hover {
+                        background-color: #45a049;
+                    }
+                </style>
+                  <button type="button">Add to cart</button>
+
+            </div>
+            <div class="product">
+                <img src="images/pearlkit.jpeg" alt="Product 2">
+                <h3>PEARL RoadShow</h3>
+                <p>An entry level kit from one of the best brands out there.</p>
+                <p>INR 50,000/-</p>
+                <div class="audio-container">
+                    <audio controls style="width: 200px;">
+                      <source src="drumsaudio-[AudioTrimmer.com].mp3" type="audio/mp3">
+                      Your browser does not support the audio element.
+                    </audio>
+                
+                  </div>
+                  <style>
+                    
+            
+                    button {
+                        background-color: #4CAF50;
+                        color: #fff;
+                        border: none;
+                        padding: 10px 20px;
+                        font-size: 1em;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        transition: background-color 0.3s ease-in-out;
+                        align-items:baseline;
+                    }
+            
+                    button:hover {
+                        background-color: #45a049;
+                    }
+                </style>
+                <button type="button">Add to cart</button>
+                
+
+                  
+
+            </div>
+            
+            
+            
+
+            <!-- Add more product entries as needed -->
+
+        </div>
+    </div>
+   
+
+</body>
+</html>

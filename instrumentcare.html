@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Instrument Care</title>
+    <style>
+        .center-div {
+            text-align: center;
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            color: #a43030;
+        }
+
+        header {
+            background-color: #c96e6e;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .left{
+                padding-left: 80%;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        select, textarea, input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .confirmation-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="center-div">
+            <img src="images/logo.png" alt="Logo" width="120" height="100">
+        </div>
+        <span class="left">Contact Us: 9898989898</span>
+        
+        <h1 style="margin: 0; font-size: 36px;">Music Instrument Care</h1>
+    </header>
+
+    <div class="container">
+        <form id="instrumentCareForm">
+            <label for="userName">Your Name:</label>
+            <input type="text" id="userName" name="userName" required>
+
+            <label for="userContact">Contact Details:</label>
+            <input type="text" id="userContact" name="userContact" required>
+
+            <label for="userAddress">Your Address:</label>
+            <input type="text" id="userAddress" name="userAddress" required>
+
+            <label for="instrumentType">Instrument Type:</label>
+            <select id="instrumentType" name="instrumentType" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="guitar">Guitar</option>
+                <option value="piano">Piano</option>
+                <option value="drums">Drums</option>
+                <option value="violin">Violin</option>
+                <option value="violin">Tabla</option>
+                <option value="violin">Production Equipment</option>
+                <option value="violin">Others</option>
+            </select>
+
+            <label for="problemDescription">Problem Description:</label>
+            <textarea id="problemDescription" name="problemDescription" rows="4" required></textarea>
+
+            <label for="additionalDetails">Additional Details:</label>
+            <textarea id="additionalDetails" name="additionalDetails" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="confirmationMessage" class="confirmation-message">
+            Your service has been registered! We'll contact you soon.
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('instrumentCareForm');
+            const confirmationMessage = document.getElementById('confirmationMessage');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                confirmationMessage.style.display = 'block';
+                // Clear form fields
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
